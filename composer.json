@@ -1,0 +1,34 @@
+{
+    "name": "omnical/caldav",
+    "type": "library",
+    "description": "Reserved, not released yet: CalDAV for omnisense/omnical.",
+    "keywords": [
+        "omnical",
+        "caldav",
+        "reserved"
+    ],
+    "homepage": "https://github.com/glitchr-omnisense/omnical-caldav",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnical\\Caldav\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-1.x": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
