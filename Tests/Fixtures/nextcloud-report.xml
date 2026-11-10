@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<d:multistatus xmlns:d="DAV:" xmlns:s="http://sabredav.org/ns" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:oc="http://owncloud.org/ns" xmlns:nc="http://nextcloud.org/ns">
+ <d:response>
+  <d:href>/remote.php/dav/calendars/anna/personal/2F3E8A10-outlook.ics</d:href>
+  <d:propstat>
+   <d:prop>
+    <d:getetag>"6c1a0d2b5f0e4b8f"</d:getetag>
+    <cal:calendar-data>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:Microsoft Exchange Server 2010
+BEGIN:VTIMEZONE
+TZID:W. Europe Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:040000008200E00074C5B7101A82E008
+SUMMARY:Comité de direction
+DTSTART;TZID=W. Europe Standard Time:20261103T100000
+DTEND;TZID=W. Europe Standard Time:20261103T113000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TU
+LOCATION:Salle Kléber
+ORGANIZER;CN=Claire Durand:mailto:claire@example.org
+ATTENDEE;CN=Anna;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT:mailto:anna@example.org
+ATTENDEE;CN=Salle Kléber;CUTYPE=ROOM;PARTSTAT=ACCEPTED;ROLE=NON-PARTICIPANT:mailto:kleber@example.org
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LAST-MODIFIED:20261020T080000Z
+DTSTAMP:20261020T080000Z
+END:VEVENT
+END:VCALENDAR
+</cal:calendar-data>
+   </d:prop>
+   <d:status>HTTP/1.1 200 OK</d:status>
+  </d:propstat>
+ </d:response>
+ <d:response>
+  <d:href>/remote.php/dav/calendars/anna/personal/vacances.ics</d:href>
+  <d:propstat>
+   <d:prop>
+    <d:getetag>"0d9e1f7a"</d:getetag>
+    <cal:calendar-data>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nextcloud calendar v5
+BEGIN:VEVENT
+UID:vacances-2026@example.org
+SUMMARY:Congés
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261121
+TRANSP:TRANSPARENT
+DTSTAMP:20261001T080000Z
+END:VEVENT
+END:VCALENDAR
+</cal:calendar-data>
+   </d:prop>
+   <d:status>HTTP/1.1 200 OK</d:status>
+  </d:propstat>
+ </d:response>
+</d:multistatus>

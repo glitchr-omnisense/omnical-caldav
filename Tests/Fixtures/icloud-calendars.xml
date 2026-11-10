@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/" xmlns:A="http://apple.com/ns/ical/">
+  <response>
+    <href>/123456789/calendars/</href>
+    <propstat><prop><resourcetype><collection/></resourcetype></prop><status>HTTP/1.1 200 OK</status></propstat>
+    <propstat><prop><displayname/><C:calendar-description/></prop><status>HTTP/1.1 404 Not Found</status></propstat>
+  </response>
+  <response>
+    <href>/123456789/calendars/home/</href>
+    <propstat>
+      <prop>
+        <resourcetype><collection/><C:calendar/></resourcetype>
+        <displayname>Domicile</displayname>
+        <A:calendar-color>#1BADF8FF</A:calendar-color>
+        <CS:getctag>HwoQEgwAAEp0XQ4bAAEAARgAIhUI</CS:getctag>
+        <C:supported-calendar-component-set><C:comp name="VEVENT"/></C:supported-calendar-component-set>
+        <C:calendar-timezone>BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//iCloud//EN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:Europe/Paris&#13;
+BEGIN:STANDARD&#13;
+DTSTART:19961027T030000&#13;
+TZOFFSETFROM:+0200&#13;
+TZOFFSETTO:+0100&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</C:calendar-timezone>
+        <current-user-privilege-set><privilege><all/></privilege><privilege><read/></privilege></current-user-privilege-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/123456789/calendars/tasks/</href>
+    <propstat>
+      <prop>
+        <resourcetype><collection/><C:calendar/></resourcetype>
+        <displayname>Rappels</displayname>
+        <C:supported-calendar-component-set><C:comp name="VTODO"/></C:supported-calendar-component-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/123456789/calendars/0A1B2C3D-shared/</href>
+    <propstat>
+      <prop>
+        <resourcetype><collection/><C:calendar/><CS:shared/></resourcetype>
+        <displayname>Famille</displayname>
+        <A:calendar-color>#CC73E1</A:calendar-color>
+        <C:supported-calendar-component-set><C:comp name="VEVENT"/></C:supported-calendar-component-set>
+        <current-user-privilege-set><privilege><read/></privilege><privilege><C:read-free-busy/></privilege></current-user-privilege-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/123456789/calendars/inbox/</href>
+    <propstat><prop><resourcetype><collection/><C:schedule-inbox/></resourcetype></prop><status>HTTP/1.1 200 OK</status></propstat>
+  </response>
+</multistatus>

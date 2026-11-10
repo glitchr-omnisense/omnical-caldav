@@ -1,12 +1,8 @@
 {
     "name": "omnical/caldav",
     "type": "library",
-    "description": "Reserved, not released yet: CalDAV for omnisense/omnical.",
-    "keywords": [
-        "omnical",
-        "caldav",
-        "reserved"
-    ],
+    "description": "Omnical's CalDAV (RFC 4791), under any PHP host: the calendars of iCloud, Fastmail, Nextcloud or any sabre/dav server found from the server's address (current-user-principal, calendar-home-set), their events read (recurrences expanded or kept as RRULE data, time zones, attendees) and written (PUT with If-None-Match and If-Match against lost updates, DELETE), and busy time (free-busy-query, or computed from the events where the server does not answer it) - on sabre/xml and sabre/vobject, credentials by reference.",
+    "keywords": ["caldav", "webdav", "icalendar", "calendar", "events", "free-busy", "icloud", "fastmail", "nextcloud", "sabre", "framework-agnostic", "omnical"],
     "homepage": "https://github.com/glitchr-omnisense/omnical-caldav",
     "license": "MIT",
     "authors": [
@@ -16,14 +12,35 @@
         }
     ],
     "require": {
-        "php": ">=8.2"
+        "php": ">=8.2",
+        "omnisense/contracts": "^1.0@dev",
+        "omnisense/omnical": "^1.0@dev",
+        "sabre/vobject": "^4.5",
+        "sabre/xml": "^2.2 || ^4.0",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.0",
+        "sabre/dav": "^4.7"
     },
     "autoload": {
         "psr-4": {
             "Omnical\\Caldav\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnical\\Caldav\\Tests\\": "Tests/"
         }
     },
     "extra": {
+        "omnisense": {
+            "policy": "policy.json"
+        },
         "branch-alias": {
             "dev-1.x": "1.x-dev"
         }

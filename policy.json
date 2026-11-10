@@ -1,0 +1,26 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "caldav",
+    "rateLimits": null,
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {"permission": "unknown", "maxTtl": null},
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {"required": false, "text": null, "url": null, "where": []},
+        "licence": null
+    },
+    "requirements": {
+        "key": true,
+        "userAgent": {"required": false, "pattern": null}
+    },
+    "provenance": {
+        "terms": "https://www.rfc-editor.org/rfc/rfc4791",
+        "policy": null,
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": null,
+        "notes": "CalDAV is a protocol: each server's own terms and limits apply, and the site configures them (policy). Read on 2026-11-10: iCloud (https://caldav.icloud.com/, which answers from a pNN-caldav.icloud.com partition) needs an app-specific password, which needs two-factor authentication, at most 25 active, all revoked when the Apple Account password changes (https://support.apple.com/en-us/102654); Apple publishes no CalDAV developer terms nor limits. Fastmail (https://caldav.fastmail.com/) needs an app password, and its Basic plan has no CalDAV (https://www.fastmail.help/hc/en-us/articles/1500000278342); no limits documented. Nextcloud (https://<host>/remote.php/dav) throttles failed logins, no read limit documented. Google's CalDAV (https://apidata.googleusercontent.com/caldav/v2/) takes OAuth 2.0 only and shares the Calendar API's quotas (10,000 requests a minute per project, 600 a minute per user; https://developers.google.com/workspace/calendar/api/guides/quota): a site using it tightens this policy with them. The free-busy-query REPORT (RFC 4791 §7.10) is not supported by Google (its CalDAV guide) and reported unsupported by iCloud: busy time is then computed from the events of the span."
+    }
+}
